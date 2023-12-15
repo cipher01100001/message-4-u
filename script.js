@@ -5,7 +5,9 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Yay, see you on the 18th!";
+  yesBtn.style.display = "none";
+  noBtn.style.display = "none";
+  question.innerHTML = "Yaaayy, I'll see you on the night of the 18th.";
   gif.src =
     "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
 });
@@ -20,4 +22,9 @@ noBtn.addEventListener("mouseover", () => {
 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
+});
+
+noBtn.addEventListener("click", () => {
+  gif.src =
+  "./lila.jpg";
 });
